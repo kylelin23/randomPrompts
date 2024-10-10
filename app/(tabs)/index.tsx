@@ -6,7 +6,18 @@ import * as Svg from 'react-native-svg';
 export default function HomeScreen() {
   const [text, setText] = React.useState("Press Button")
   const event = () => {
-    setText("Pressed!")
+    const choices = [
+      'Bang Chan',
+      'Changbin',
+      'Han',
+      'Felix',
+      'Hyunjin',
+      'Lee Know',
+      'Jeongin',
+      'Seungmin'
+    ]
+    const num = Math.floor(Math.random() * choices.length)
+    setText(choices[num])
   }
 
   return (
@@ -17,7 +28,7 @@ export default function HomeScreen() {
           height = {100}
           width = {180}
           color="#4E5372"
-          squish={7}
+          squish={50}
           radius={5}
           text="Generate!"
           textStyle={{
