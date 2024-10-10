@@ -4,14 +4,14 @@ import { SquishButton } from 'react-native-squish-button';
 import * as Svg from 'react-native-svg';
 
 export default function HomeScreen() {
-
+  const [text, setText] = React.useState("Press Button")
   const event = () => {
-
+    setText("Pressed!")
   }
 
   return (
     <View style = {styles.screenContainer}>
-      <Text style = {styles.generated}>Jeongin</Text>
+      <Text style = {styles.generated}>{text}</Text>
       <TouchableOpacity onPress = {event} style = {{height: 100}}>
         <SquishButton
           height = {100}
