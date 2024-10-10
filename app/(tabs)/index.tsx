@@ -1,12 +1,18 @@
-import { Text, StyleSheet, View } from 'react-native';
+import React from 'react';
+import { Text, TouchableOpacity, StyleSheet, View } from 'react-native';
 import { SquishButton } from 'react-native-squish-button';
 import * as Svg from 'react-native-svg';
 
 export default function HomeScreen() {
+
+  const event = () => {
+
+  }
+
   return (
     <View style = {styles.screenContainer}>
       <Text style = {styles.generated}>Jeongin</Text>
-      <View style = {{height: 100}}>
+      <TouchableOpacity onPress = {event} style = {{height: 100}}>
         <SquishButton
           height = {100}
           width = {180}
@@ -21,7 +27,7 @@ export default function HomeScreen() {
             fontSize: 16,
           }}
         />
-      </View>
+      </TouchableOpacity>
     </View>
   );
 }
