@@ -4,9 +4,9 @@ import { SquishButton } from 'react-native-squish-button';
 import * as Svg from 'react-native-svg';
 
 export default function HomeScreen() {
-  const [text, setText] = React.useState("Press Button")
+  const [text, setText] = React.useState("Press Button!")
   const event = () => {
-    const choices = [
+    const skz = [
       'Bang Chan',
       'Changbin',
       'Han',
@@ -16,8 +16,8 @@ export default function HomeScreen() {
       'Jeongin',
       'Seungmin'
     ]
-    const num = Math.floor(Math.random() * choices.length)
-    setText(choices[num])
+    const num = Math.floor(Math.random() * skz.length)
+    setText(skz[num])
   }
 
   return (
@@ -52,7 +52,8 @@ const styles = StyleSheet.create({
   },
 
   generated: {
-    fontSize: 70,
+    fontSize: 50,
+    textAlign: 'center',
   },
 
   container2: {
